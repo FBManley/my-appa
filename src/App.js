@@ -3,30 +3,32 @@ import './App.css';
 import React from "react";
 import {
   BrowserRouter as Router,
-  Routes,
-  Route
+  Route,
+  Routes
 } from "react-router-dom";
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import RecipeList  from './components/RecipeList';
-import RecipeCard from './components/RecipeCard';
-import RecipeForm from './components/RecipeForm';
+import Login from './element/Login';
+import SignUp from './element/SignUp';
+import RecipeList  from './element/RecipeList';
+import RecipeCard from './element/RecipeCard';
+import RecipeForm from './element/RecipeForm'; 
+import Home from './element/Home';
+
 
 function App() {
   return (
+
     <Router>
     
-      <Routes>
-        
-        <Route exact path="/" component={<Home />}/>
-        <Route path="/login" component={<Login />}/>
-        <Route path="/signup" component={ <SignUp />}/>
-        <Route path="/recipelist" component={<RecipeList />}/>
-        <Route path="/recipecard" component={<RecipeCard />}/>
-        <Route path="/recipe/new" component={ <RecipeForm />}/> 
-      </Routes>
+        <Routes>
+          
+        <Route exact path="/" element={<Home />}/>  
+        <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={ <SignUp />}/>
+        <Route path="/recipelist" element={<RecipeList />}/>
+        <Route path="/recipecard" element={<RecipeCard />}/>
+        <Route path="/recipe/new" element={ <RecipeForm />}/> 
+        </Routes>
+     
     </Router>
   );
 }
