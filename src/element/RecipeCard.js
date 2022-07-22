@@ -2,7 +2,10 @@ import React from 'react'
 
  const RecipeCard = () => {
   return (
-    <div>RecipeCard</div>
+    <div>
+      <h1>Ingredients</h1>
+      
+    </div>
   )
 }
 export default RecipeCard;
