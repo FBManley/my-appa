@@ -1,2 +1,4 @@
        
+       get: get random drink from api 
+       post: save drink to orderlist
        

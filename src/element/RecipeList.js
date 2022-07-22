@@ -4,7 +4,7 @@ import NewRecipeButton from "./NewRecipeButton";
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/recipes")
+    fetch("http://localhost:3001/drinks")
     .then(resp=>resp.json())
     .then(data => setRecipes(data))
   }, [])
