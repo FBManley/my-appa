@@ -30,7 +30,7 @@ const RecipeForm = () => {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
     .then(r => r.json())
     .then(data => {
-      console.log(data)
+      // console.log(data)
       setCocktail({
         strDrink: '',
         strGlass: '',
@@ -52,7 +52,7 @@ const RecipeForm = () => {
 
   return (
    <div>
-    <CocktailCard />
+    <CocktailCard drinks={cocktail}/>
    </div>
   )
 }
