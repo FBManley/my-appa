@@ -1,7 +1,6 @@
 import React from "react";
-/* Add NavLink to import */
-import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
-/* Add basic styling for NavLinks */
+import {  NavLink } from "react-router-dom";
+
 
 const linkStyles = {
   display: "inline-block",
@@ -13,21 +12,14 @@ const linkStyles = {
   color: "white",
 };
 
-/* define the NavBar component */
 function NavBar() {
   return (
-    <div>
+    <nav>
       <NavLink
         to="/"
-        style={linkStyles}
+        style={linkStyles}        
       >
         Home
-      </NavLink>
-      <NavLink
-        to="/recipelist"
-        style={linkStyles}
-      >
-        Recipe List
       </NavLink>
       <NavLink
         to="/login"
@@ -36,18 +28,26 @@ function NavBar() {
         Login
       </NavLink>
       <NavLink
+        to="/recipelist"
+        style={linkStyles}
+        
+      >
+        Recipe List
+      </NavLink>
+
+      {/* <NavLink
         to="/signup" 
         style={linkStyles}
       >
         Sign Up
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/recipe/new"
         style={linkStyles}
       >
         Create New Recipe
       </NavLink>
-    </div>
+    </nav>
   );
 }
 export default NavBar;

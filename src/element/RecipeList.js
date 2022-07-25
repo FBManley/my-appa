@@ -1,19 +1,22 @@
 import React, { useState, useEffect} from 'react'
 import NewRecipeButton from "./NewRecipeButton";
- const RecipeList = () => {
+
+//on startup (empty square brackets), sends GET req to db.json and renders saved recipes on the page. 
+
+const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/order")
-    .then(resp=>resp.json())
+    fetch("http://localhost:3001/recipes")
+    .then(resp => resp.json())
     .then(data => setRecipes(data))
   }, [])
 
-  const recipesList = recipes.map((r => <li>{r.recipes}</li>))
+  const recipesList = recipes.map((r => <li>{r.name}</li>))
 
   return (
     <div>
-      <h3>RecipeList / My Recipes</h3>
+      <h3></h3>
       <hr />
       {recipesList}
       <hr/>

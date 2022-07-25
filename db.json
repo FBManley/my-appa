@@ -1,8 +1,24 @@
 {
-  "order": [
+  "recipes": [
     {
-    "id": 1,
-    "name": "beer"
+      "id": 1,
+      "name": "beer"
+    },
+    {
+      "id": 2,
+      "name": "whiskey"
+    },
+    {
+      "drink": "",
+      "amount": "",
+      "id": 3
+    },
+    {
+      "drink": "drink",
+      "amount": "2",
+      "ingredients": "orange",
+      "instructions": "blend",
+      "id": 4
     }
   ]
 }

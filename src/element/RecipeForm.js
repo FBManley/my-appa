@@ -2,14 +2,15 @@ import React, { useState, useEffect} from 'react';
 import CocktailCard from './CocktailCard'
  
 const RecipeForm = () => {
-  const [neworder, setnewOrder] = useState({
+  const [newrecipe, setnewRecipe] = useState({
       drink: '',
       amount: '',
 
-    // information from my form to create an order in my db.json. cost? 
+
+    // information from my form to create a recipe in my db.json. 
   })
   const [cocktail, setCocktail] = useState({
-    //information from my API
+    //information from external API
     strDrink: '',
     strGlass: '',
     strInstructions: '',
@@ -42,15 +43,33 @@ const RecipeForm = () => {
   }, [])
 
   const handleChange = (e) => {
-    setnewOrder({
-      ...neworder, [e.target.name]: e.target.value
+    setnewRecipe({
+      ...newrecipe, [e.target.name]: e.target.value
     })
   }
 //e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
 
   const handleSubmit = (e) => {
     e.preventDefault() //suppressing default action of form is post, then refresh
+    // const mynewRecipe = {
+    //   drink: newrecipe.drink,
+    //   amount: newrecipe.amount,
+    //   ingredients: newrecipe.ingredients,
+    //   instructions: newrecipe.instructions
+    // }
+    // fetch("http://localhost:3001/recipes", {
+    //   method: "POST",
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(mynewRecipe)
+    // })
+    // .then(r = r.json())
+    // .then(data => {
+    //   console.log(data)
+    // })
   }
+
   return (
    <div>
     <CocktailCard drinks={cocktail}/>
@@ -59,7 +78,11 @@ const RecipeForm = () => {
       <input name="drink" onChange={handleChange} type="text" /><br/>
       <label>Amount</label>
       <input name="amount" onChange={handleChange} type="text" /><br/> 
+      <label>Ingredients</label>
+      <input name="ingredients" onChange={handleChange} type="text" /><br/> 
       <input type="submit" />
+      <label>Instructions</label>
+      <input name="instructions" onChange={handleChange} type="text" /><br/> 
     </form>
    </div>
   )
