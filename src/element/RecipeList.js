@@ -12,11 +12,11 @@ const RecipeList = () => {
     .then(data => setRecipes(data))
   }, [])
 
-  const recipesList = recipes.map((r => <li>{r.name}</li>))
-
+  const recipesList = recipes.map((r => <li key={r.id} value={r}>{r.name}</li>)) //make able to delete
+  // const deleterecipe = () => {}
   return (
     <div>
-      <h3></h3>
+      <h3>My recipe list:</h3>
       <hr />
       {recipesList}
       <hr/>

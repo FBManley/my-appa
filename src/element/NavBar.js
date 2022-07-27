@@ -1,7 +1,6 @@
 import React from "react";
 import {  NavLink } from "react-router-dom";
 
-
 const linkStyles = {
   display: "inline-block",
   width: "140px",
@@ -22,25 +21,11 @@ function NavBar() {
         Home
       </NavLink>
       <NavLink
-        to="/login"
-        style={linkStyles}
-      >
-        Login
-      </NavLink>
-      <NavLink
         to="/recipelist"
-        style={linkStyles}
-        
+        style={linkStyles}  
       >
         Recipe List
       </NavLink>
-
-      {/* <NavLink
-        to="/signup" 
-        style={linkStyles}
-      >
-        Sign Up
-      </NavLink> */}
       <NavLink
         to="/recipe/new"
         style={linkStyles}

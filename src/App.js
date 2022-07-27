@@ -6,13 +6,13 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import Login from './element/Login';
-// import SignUp from './element/SignUp';
+
 import RecipeList  from './element/RecipeList';
 import CocktailCard from './element/CocktailCard';
 import RecipeForm from './element/RecipeForm'; 
 import Home from './element/Home';
 import NavBar from './element/NavBar';
+
 
 function App() {
 
@@ -22,8 +22,6 @@ function App() {
     <NavBar />
         <Routes>
         <Route exact path="/" element={<Home />}/>  
-        <Route exact path="/login" element={<Login />}/>
-        {/* <Route exact path="/signup" element={ <SignUp />}/> */}
         <Route exact path="/recipelist" element={<RecipeList />}/>
         <Route exact path="/cocktailcard" element={<CocktailCard />}/>
         <Route exact path="/recipe/new" element={ <RecipeForm />}/> 
