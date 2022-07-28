@@ -9,25 +9,26 @@ const RecipeList = () => {
   useEffect(() => {
     fetch("http://localhost:3001/recipes")
     .then(resp => resp.json())
-    .then(data => setRecipes(data))
+    .then(recipes => setRecipes(recipes)
+      )
   }, [])
-  console.log(recipes)
- const recipesList = recipes.map((r => <li key={r.id} >{r.name} {r.ingedients} {r.instructions}</li>)) //need to render a single RecipeCard component for each li
 
-  // const deleterecipe = () => {}
+ const recipesList = recipes.map((recipe) => (
+  <RecipeCard 
+    key={recipe.id}
+    name={recipe.name}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+    amount={recipe.amount}
+  />
+ )) 
   return (
     <div>
-      
-      <h3>My recipe list:</h3>
+      <h3>My recipe list:{recipesList}</h3>
       <hr />
-      {recipesList}
-      <hr/>
-      <NewRecipeButton />
-      <RecipeCard recipesList={recipesList}/>
-      </div>
+      <NewRecipeButton   />
+    </div>
   )
 }
-// 
 export default RecipeList;
-
 // functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child
