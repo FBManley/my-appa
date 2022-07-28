@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import NewRecipeButton from "./NewRecipeButton";
 import RecipeCard from "./RecipeCard";
-// import RecipeCard from "./RecipeCard";
 //on startup (empty square brackets), sends GET req to db.json and renders saved recipes on the page. 
 
 const RecipeList = () => {
@@ -12,8 +11,8 @@ const RecipeList = () => {
     .then(resp => resp.json())
     .then(data => setRecipes(data))
   }, [])
-
- const recipesList = recipes.map((r => <li key={r.id} value={r}>{r.name}{r.amount}{r.ingredients}{r.instructions}</li>)) //need to render a single RecipeCard component for each li
+  console.log(recipes)
+ const recipesList = recipes.map((r => <li key={r.id} >{r.name} {r.ingedients} {r.instructions}</li>)) //need to render a single RecipeCard component for each li
 
   // const deleterecipe = () => {}
   return (
@@ -21,10 +20,10 @@ const RecipeList = () => {
       
       <h3>My recipe list:</h3>
       <hr />
-      {recipes}
+      {recipesList}
       <hr/>
       <NewRecipeButton />
-      <RecipeCard recipes={recipesList}/>
+      <RecipeCard recipesList={recipesList}/>
       </div>
   )
 }

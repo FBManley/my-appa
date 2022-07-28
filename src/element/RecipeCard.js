@@ -1,13 +1,15 @@
 import React from 'react'
 
-const RecipeCard = ({ recipes }) => { //send props from recipeLists, render a card for single db.json objectn by id
-    console.log(recipes)
+const RecipeCard = ({ recipesList }) => { //send props from recipeLists, render a card for single db.json objectn by id
+    console.log(recipesList)
     
 
   return (
 
     <div>RecipeCard
-        <h2 recipes>{[0].props.value.name}</h2>
+        <h2 >{[0].props}</h2>
+        <h1>{recipesList[0]}</h1>
+        <h1>{recipesList}</h1>
         {/* <h2>{amount}</h2>
         <h2>{ingredients}</h2>
         <h2>{instructions}</h2>
