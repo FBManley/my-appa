@@ -3,6 +3,14 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 
 const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send props from recipeLists, render a card for single db.json objectn by id
+  
+  // const handleDeleteClick = () => {
+  //   fetch(`http://localhost:3001/recipes/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //   .then((r) => r.json())
+  //   .then(() => console.log("deleted!"))
+  // }
 
   return (
     <div>
@@ -12,7 +20,7 @@ const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send
       <p>{ingredients}</p>
       <p>{instructions}</p>
       <p>{id}</p>
-      <Button variant="contained">delete</Button>
+      <Button className="remove" variant="contained" >delete</Button>
       </Card>
      </div>
   )

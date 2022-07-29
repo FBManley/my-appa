@@ -14,6 +14,7 @@ const RecipeList = () => {
       )
   }, [])
 
+
  const recipesList = recipes.map((recipe) => (
   <RecipeCard 
     key={recipe.id}
@@ -21,6 +22,7 @@ const RecipeList = () => {
     ingredients={recipe.ingredients}
     instructions={recipe.instructions}
     amount={recipe.amount}
+   
   />
  )) 
   return (

@@ -24,3 +24,8 @@ nav {
     text-decoration: "none";
     color: "blue";
 }
+
+img {
+  height: 300px;
+  width: 300px;
+}

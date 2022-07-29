@@ -16,6 +16,7 @@ const RecipeForm = () => {
       ...newrecipe, [e.target.name]: e.target.value
     })
   }
+
   const handleSubmit = (e) => {
     e.preventDefault() //suppressing default action of form is post, then refresh
     fetch("http://localhost:3001/recipes", {
@@ -30,7 +31,7 @@ const RecipeForm = () => {
        instructions: newrecipe.instructions,
       })
     })
-    // setnewRecipe("") need to reset form
+    e.target.reset();
   }
 
   const [cocktail, setCocktail] = useState({
@@ -59,6 +60,7 @@ const RecipeForm = () => {
       })
     })
   }, []) //different array here to allow for another call to this fetch instead ONLY on load
+  //dont need useEffect here, can just be a fetch in seperate function. not a must but is nice to have
 
 //e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
   return (
@@ -70,13 +72,13 @@ const RecipeForm = () => {
     <form onSubmit={handleSubmit}>
       <lable for="name">Drink Name:</lable>
       <input name="name" onChange={handleChange} type="text" /><br/>
-      <label>Amount:</label>
+      <label>Amount: </label>
       <input name="amount" onChange={handleChange} type="text" /><br/> 
       <label>Ingredients:</label>
       <input name="ingredients" onChange={handleChange} type="text" /><br/> 
-      <input type="submit" />
       <label>Instructions:</label>
       <input name="instructions" onChange={handleChange} type="text" /><br/> 
+      <Button variant="contained" ><input type="submit" /></Button>
     </form>
    </div>
   )

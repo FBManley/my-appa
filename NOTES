@@ -6,7 +6,6 @@ list recipes
 https://www.thecocktaildb.com/api.php
 
 
-FIND NEW RECIPE BUTTON in from-
-DELETE BUTTON FOR CRUD-stretch goal
-RESET FORM ON SUBMISSION- must be done
+FIND NEW RECIPE BUTTON in from- does this need to be in state? does this need a useEffect? can i just call a to fetch
+DELETE BUTTON FOR CRUD-stretch goal // 
 body/page background: "black";- nice to have
