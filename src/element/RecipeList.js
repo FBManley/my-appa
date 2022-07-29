@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import NewRecipeButton from "./NewRecipeButton";
 import RecipeCard from "./RecipeCard";
+
 //on startup (empty square brackets), sends GET req to db.json and renders saved recipes on the page. 
 
 const RecipeList = () => {

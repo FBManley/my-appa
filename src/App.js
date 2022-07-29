@@ -13,7 +13,6 @@ import RecipeForm from './element/RecipeForm';
 import Home from './element/Home';
 import NavBar from './element/NavBar';
 
-
 function App() {
 
   return (
@@ -25,9 +24,7 @@ function App() {
         <Route exact path="/recipelist" element={<RecipeList />}/>
         <Route exact path="/cocktailcard" element={<CocktailCard />}/>
         <Route exact path="/recipe/new" element={ <RecipeForm />}/> 
-        
         </Routes>
-     
     </Router>
   );
 }

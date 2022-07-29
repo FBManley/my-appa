@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import CocktailCard from './CocktailCard'
- 
+import Card from '@mui/material/Card';
+
 const RecipeForm = () => {
   const [newrecipe, setnewRecipe] = useState([{
       name: '',
@@ -32,48 +33,47 @@ const RecipeForm = () => {
     // setnewRecipe("") need to reset form
   }
 
-  // const [cocktail, setCocktail] = useState({
-  //   //information from external API
-  // })
+  const [cocktail, setCocktail] = useState({
+    //information from external API
+  })
 
-  // useEffect(() => {
-  //   fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-  //   .then(r => r.json())
-  //   .then(data => {
-  //     // console.log(data)
-  //     setCocktail({
-  //       strDrink: data.drinks[0].strDrink,
-  //       strGlass: data.drinks[0].strGlass,
-  //       strInstructions: data.drinks[0].strInstructions,
-  //       strIngredient1: data.drinks[0].strIngredient1,
-  //       strIngredient2: data.drinks[0].strIngredient2,
-  //       strIngredient3: data.drinks[0].strIngredient3,
-  //       strIngredient4: data.drinks[0].strIngredient4,
-  //       strIngredient5: data.drinks[0].strIngredient5,
-  //       strMeasure1: data.drinks[0].strMeasure1,
-  //       strMeasure2: data.drinks[0].strMeasure2,
-  //       strMeasure3: data.drinks[0].strMeasure3,
-  //       strMeasure4: data.drinks[0].strMeasure4,
-  //       strMeasure5: data.drinks[0].strMeasure5,
-  //       strDrinkThumb: data.drinks[0].strDrinkThumb
-        
-  //     })
-  //   })
-  // }, [])
+  useEffect(() => {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+    .then(r => r.json())
+    .then(data => {
+      // console.log(data)
+      setCocktail({
+        strDrink: data.drinks[0].strDrink,
+        strGlass: data.drinks[0].strGlass,
+        strInstructions: data.drinks[0].strInstructions,
+        strIngredient1: data.drinks[0].strIngredient1,
+        strIngredient2: data.drinks[0].strIngredient2,
+        strIngredient3: data.drinks[0].strIngredient3,
+        strIngredient4: data.drinks[0].strIngredient4,
+        strIngredient5: data.drinks[0].strIngredient5,
+        strMeasure1: data.drinks[0].strMeasure1,
+        strMeasure2: data.drinks[0].strMeasure2,
+        strMeasure3: data.drinks[0].strMeasure3,
+        strMeasure4: data.drinks[0].strMeasure4,
+        strMeasure5: data.drinks[0].strMeasure5,
+        strDrinkThumb: data.drinks[0].strDrinkThumb
+      })
+    })
+  }, [])
 
 //e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
   return (
    <div>
-    {/* <CocktailCard drinks={cocktail}/> */}
+    <Card><CocktailCard drinks={cocktail}/></Card>
     <form onSubmit={handleSubmit}>
-      <lable>Drink Name</lable>
+      <lable for="name">Drink Name:</lable>
       <input name="name" onChange={handleChange} type="text" /><br/>
-      <label>Amount</label>
+      <label>Amount:</label>
       <input name="amount" onChange={handleChange} type="text" /><br/> 
-      <label>Ingredients</label>
+      <label>Ingredients:</label>
       <input name="ingredients" onChange={handleChange} type="text" /><br/> 
       <input type="submit" />
-      <label>Instructions</label>
+      <label>Instructions:</label>
       <input name="instructions" onChange={handleChange} type="text" /><br/> 
     </form>
    </div>

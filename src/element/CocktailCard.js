@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import { Link } from 'react-router-dom';
 
  const CocktailCard = ({drinks}) => {
     const {  
@@ -17,16 +20,17 @@ import React from 'react'
       strMeasure5,
       strDrinkThumb } = drinks
   return (
+    <Card>
     <div>
-      <h3>{strDrinkThumb}</h3>
+      <img src={strDrinkThumb} alt="image"></img>
       <h1>Your cocktail is: {strDrink}</h1>
-      {/* <h2>Category:{strCategory}</h2> */}
       <h2>Ingredients: {strIngredient1} {strMeasure1}, {strIngredient2} {strMeasure2}, {strIngredient3} {strMeasure3}, {strIngredient4} {strMeasure4}, {strIngredient5} {strMeasure5}</h2>
       <h2>Glass: {strGlass}</h2>
       <h3>Instructions: {strInstructions}</h3>
-      <button >Find New Recipe</button> 
+      {/* <Link to={'/recipe/new'}><Button variant="contained">Find New Recipe</Button> </Link> */}
       {/* onClick for this button- state/fetch coming from form parent  */}
     </div>
+    </Card>
   )
 }
 export default CocktailCard;
