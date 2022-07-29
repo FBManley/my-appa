@@ -6,8 +6,7 @@ list recipes
 https://www.thecocktaildb.com/api.php
 
 
-FIND NEW RECIPE BUTTON-
-DELETE BUTTON FOR CRUD-
-RESET FORM ON SUBMISSION-
-<h3>{strDrinkThumb}</h3>- render image in CocktailCard
-body/page background: "black";
+FIND NEW RECIPE BUTTON in from-
+DELETE BUTTON FOR CRUD-stretch goal
+RESET FORM ON SUBMISSION- must be done
+body/page background: "black";- nice to have

@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import { Link } from 'react-router-dom';
 
  const CocktailCard = ({drinks}) => {
     const {  
@@ -27,8 +26,6 @@ import { Link } from 'react-router-dom';
       <h2>Ingredients: {strIngredient1} {strMeasure1}, {strIngredient2} {strMeasure2}, {strIngredient3} {strMeasure3}, {strIngredient4} {strMeasure4}, {strIngredient5} {strMeasure5}</h2>
       <h2>Glass: {strGlass}</h2>
       <h3>Instructions: {strInstructions}</h3>
-      {/* <Link to={'/recipe/new'}><Button variant="contained">Find New Recipe</Button> </Link> */}
-      {/* onClick for this button- state/fetch coming from form parent  */}
     </div>
     </Card>
   )
