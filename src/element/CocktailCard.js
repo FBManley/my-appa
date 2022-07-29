@@ -1,6 +1,5 @@
 import React from 'react'
-// import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
+import styled from 'styled-components'
 
  const CocktailCard = ({drinks}) => {
     const {  
@@ -33,3 +32,7 @@ import Card from '@mui/material/Card';
 export default CocktailCard;
 //use ingredient to build cocktail in recipeForm
 // fetching this in recipeform: https://www.thecocktaildb.com/api/json/v1/1/random.php
+
+const Card = styled.div`
+  background-color: #ccd0de;
+`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import styled from 'styled-components'
 
  const NewRecipeButton = () => {
   return (
@@ -10,3 +10,7 @@ import Button from '@mui/material/Button';
   )
 }
 export default NewRecipeButton;
+
+const Button = styled.div`
+  background-color: #93e5ed;
+`

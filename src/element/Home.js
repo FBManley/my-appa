@@ -4,8 +4,7 @@ import React from 'react'
   return (
     <div>
     <h1>Cocktail Hour</h1>
-    <p>This app produces a random cocktail recipe, use it to create your own recipe!    </p>
-   
+    <p>This app produces a random cocktail recipe, use it as inspiration to create your own recipe!</p>
     </div>
   )
 }

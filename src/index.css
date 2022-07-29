@@ -14,18 +14,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* const linkStyles = {
+  display: "inline-block",
+  width: "140px",
+  padding: "14px",
+  margin: "0 15px 10px",
+  background: "blue",
+  textDecoration: "none",
+  color: "white",
+}; */
 
 nav {
     display: "inline-block";
     width: "140px";
-    padding: "12px";
-    margin: "0 6px 6px";
+    padding: "14px";
+    margin: "0 15px 10px";
     background-color: "blue";
     text-decoration: "none";
-    color: "blue";
+    color: "#05010f";
 }
 
 img {
   height: 300px;
   width: 300px;
+}
+
+.navb {
+color:#310af7;
+padding: 15px;
+text: #110828;
 }

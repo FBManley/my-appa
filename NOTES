@@ -6,6 +6,6 @@ list recipes
 https://www.thecocktaildb.com/api.php
 
 
-FIND NEW RECIPE BUTTON in from- does this need to be in state? does this need a useEffect? can i just call a to fetch
+FIND NEW RECIPE BUTTON in from- does this need to be in state? does this need a useEffect? can i just call a to fetch - re-fetch will re-render. 
 DELETE BUTTON FOR CRUD-stretch goal // 
 body/page background: "black";- nice to have

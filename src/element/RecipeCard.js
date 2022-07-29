@@ -1,6 +1,5 @@
 import React from 'react'
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
+import styled from 'styled-components'
 
 const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send props from recipeLists, render a card for single db.json objectn by id
   
@@ -15,15 +14,19 @@ const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send
   return (
     <div>
       <Card sx={{ maxWidth: 350 }} variant="outlined">
-      <h3>{name}</h3>
-      <p>{amount}</p>
-      <p>{ingredients}</p>
-      <p>{instructions}</p>
+      <h3>Recipe Name: {name}</h3>
+      <p>Amount: {amount}</p>
+      <p>Ingredients: {ingredients}</p>
+      <p> Instructions: {instructions}</p>
       <p>{id}</p>
-      <Button className="remove" variant="contained" >delete</Button>
       </Card>
      </div>
   )
 }
 export default RecipeCard
 //destructuring takes the KEYS from the PROPS OBJECT and creates VARIABLES with each same names
+
+const Card = styled.div`
+  background-color: #ccd0de;
+  width: 300px;
+`

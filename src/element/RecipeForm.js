@@ -2,6 +2,8 @@ import React, { useState, useEffect} from 'react';
 import CocktailCard from './CocktailCard'
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
+import styled from 'styled-components'
+
 const RecipeForm = () => {
   const [newrecipe, setnewRecipe] = useState([{
       name: '',
@@ -66,9 +68,6 @@ const RecipeForm = () => {
   return (
    <div>
     <Card><CocktailCard drinks={cocktail}/></Card>
-    <Button variant="contained"
-    //re-fetch or re-render state to get new recipe- can it be seperate from form to use multiple recipes for an idea?
-    >get new recipe button</Button>
     <form onSubmit={handleSubmit}>
       <lable for="name">Drink Name:</lable>
       <input name="name" onChange={handleChange} type="text" /><br/>
@@ -85,3 +84,7 @@ const RecipeForm = () => {
 }
 
 export default RecipeForm;
+
+// const Button = styled.div`
+//   background-color: #6b83d1;
+// `
