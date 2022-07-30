@@ -7,7 +7,8 @@ function NavBar() {
     <Nav>
       <NavLink
         to="/" 
-        className='navb'       
+        className='navb'
+  
       >
         Home
       </NavLink>
@@ -28,8 +29,12 @@ function NavBar() {
 }
 export default NavBar;
 
-const Nav = styled.div`
-  background-color: #bfbcd4;
-  width: 400px
+const Nav = styled.div `
+  display: "inline-block";
+  width: "140px";
+  padding: "14px";
+  margin: "0 15px 10px";
+  background-color: "white";
+  text-decoration: "none";
+  color: "#05010f";
 `
-//center navbar

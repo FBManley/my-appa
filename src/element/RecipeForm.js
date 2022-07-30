@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import CocktailCard from './CocktailCard'
 import Card from '@mui/material/Card';
-import Button from '@mui/material/Button';
+
 import styled from 'styled-components'
 
 const RecipeForm = () => {
@@ -77,7 +77,7 @@ const RecipeForm = () => {
       <input name="ingredients" onChange={handleChange} type="text" /><br/> 
       <label>Instructions:</label>
       <input name="instructions" onChange={handleChange} type="text" /><br/> 
-      <Button variant="contained" ><input type="submit" /></Button>
+      <button variant="contained" ><input type="submit" /></button>
     </form>
    </div>
   )

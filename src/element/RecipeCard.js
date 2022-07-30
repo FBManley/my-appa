@@ -3,17 +3,9 @@ import styled from 'styled-components'
 
 const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send props from recipeLists, render a card for single db.json objectn by id
   
-  // const handleDeleteClick = () => {
-  //   fetch(`http://localhost:3001/recipes/${id}`, {
-  //     method: "DELETE",
-  //   })
-  //   .then((r) => r.json())
-  //   .then(() => console.log("deleted!"))
-  // }
-
   return (
     <div>
-      <Card sx={{ maxWidth: 350 }} variant="outlined">
+      <Card className='.container'sx={{ maxWidth: 350 }} variant="outlined">
       <h3>Recipe Name: {name}</h3>
       <p>Amount: {amount}</p>
       <p>Ingredients: {ingredients}</p>
@@ -29,4 +21,7 @@ export default RecipeCard
 const Card = styled.div`
   background-color: #ccd0de;
   width: 300px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 10px, 10px, 20px, 0 px, rgb(0, 0, 0, 0.2);
 `

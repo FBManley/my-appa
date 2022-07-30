@@ -26,9 +26,11 @@ const RecipeList = () => {
  )) 
   return (
     <div>
+   
       <H1>My recipe list:{recipesList}</H1>
       <hr />
       <NewRecipeButton   />
+      
     </div>
   )
 }
@@ -36,5 +38,6 @@ export default RecipeList;
 // functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child
 const H1 = styled.div`
   background-color: white;
-  width: 300px;
+  width: 100px;
+  text: bold;
 `

@@ -12,5 +12,6 @@ import styled from 'styled-components'
 export default NewRecipeButton;
 
 const Button = styled.div`
-  background-color: #93e5ed;
+  background-color: grey;
+  text-color: black;
 `
