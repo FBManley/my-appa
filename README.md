@@ -5,7 +5,7 @@ Link to video walkthrough:
 Link to blog: 
 Github link:
 
-credit to www.thecocktaildb.com
+credit to www.thecocktaildb.com | https://www.thecocktaildb.com/api.php
 
 
 # Getting Started with Create React App

@@ -1,11 +1,6 @@
-MVP
-Home Page - done
-Create recipes 
-list recipes
-
-https://www.thecocktaildb.com/api.php
+Blog- in progress
+video- in progress
 
 
-FIND NEW RECIPE BUTTON in from- does this need to be in state? does this need a useEffect? can i just call a to fetch - re-fetch will re-render. 
+FIND NEW RECIPE BUTTON- need to add and hookup 
 DELETE BUTTON FOR CRUD-stretch goal // 
-body/page background: "black";- nice to have
