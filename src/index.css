@@ -19,16 +19,3 @@ img {
   height: 300px;
   width: 300px;
 }
-
-.navb {
-color:#030111;
-padding: 15px;
-text: #d46930;
-
-}
-
-.container {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-Content: flex-start;
-}

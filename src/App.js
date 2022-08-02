@@ -11,7 +11,7 @@ import CocktailCard from './element/CocktailCard';
 import RecipeForm from './element/RecipeForm'; 
 import Home from './element/Home';
 import NavBar from './element/NavBar';
-import './style.css'
+import './styles/StyledNav.js'
 
 function App() {
 

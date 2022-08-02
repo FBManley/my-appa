@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import Card from '../styles/StyledCard'
 
  const CocktailCard = ({drinks}) => {
     const {  
@@ -33,11 +33,3 @@ export default CocktailCard;
 //use ingredient to build cocktail in recipeForm
 // fetching this in recipeform: https://www.thecocktaildb.com/api/json/v1/1/random.php
 
-const Card = styled.div`
-  background-color: #ccd0de;
-  width:  600px;
-  height: 600px;
-  padding: 10px;
-  margin: 20px;
-  box-shadow: 10px, 10px, 20px, 0 px, rgb(0, 0, 0, 0.2);
-`

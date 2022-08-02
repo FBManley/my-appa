@@ -1,40 +1,30 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
-import styled from 'styled-components'
+import {  NavLink} from "react-router-dom";
+import { NavbarLink, NavigationContainer  } from '../styles/StyledNav'
 
 function NavBar() {
   return (
-    <Nav>
-      <NavLink
+    <NavigationContainer>
+      <NavbarLink
         to="/" 
-        className='navb'
   
       >
         Home
-      </NavLink>
-      <NavLink
+      </NavbarLink>
+      <NavbarLink
         to="/recipelist"
-        className='navb'
+    
       >
         Recipe List
-      </NavLink>
-      <NavLink
+      </NavbarLink>
+      <NavbarLink
         to="/recipe/new"
-        className='navb'
+  
       >
         Create New Recipe
-      </NavLink>
-    </Nav>
+      </NavbarLink>
+    </NavigationContainer>
   );
 }
 export default NavBar;
 
-const Nav = styled.div `
-  display: "inline-block";
-  width: "140px";
-  padding: "14px";
-  margin: "0 15px 10px";
-  background-color: "white";
-  text-decoration: "none";
-  color: "#05010f";
-`

@@ -85,6 +85,3 @@ const RecipeForm = () => {
 
 export default RecipeForm;
 
-// const Button = styled.div`
-//   background-color: #6b83d1;
-// `
