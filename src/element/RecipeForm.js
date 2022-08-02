@@ -1,8 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import CocktailCard from './CocktailCard'
-import Card from '@mui/material/Card';
-
-import styled from 'styled-components'
+import FetchedCard from '../styles/StyledFetchedCard'
 
 const RecipeForm = () => {
   const [newrecipe, setnewRecipe] = useState([{
@@ -67,7 +65,8 @@ const RecipeForm = () => {
 //e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
   return (
    <div>
-    <Card><CocktailCard drinks={cocktail}/></Card>
+    <FetchedCard><CocktailCard drinks={cocktail}/></FetchedCard>
+    <br></br>
     <form onSubmit={handleSubmit}>
       <lable for="name">Drink Name:</lable>
       <input name="name" onChange={handleChange} type="text" /><br/>

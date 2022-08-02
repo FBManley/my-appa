@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import Button from '../styles/StyledButton'
 
  const NewRecipeButton = () => {
   return (
@@ -11,7 +11,3 @@ import styled from 'styled-components'
 }
 export default NewRecipeButton;
 
-const Button = styled.div`
-  background-color: grey;
-  text-color: black;
-`

@@ -2,6 +2,8 @@ import React, { useState, useEffect} from 'react'
 import NewRecipeButton from "./NewRecipeButton";
 import RecipeCard from "./RecipeCard";
 import styled from 'styled-components'
+import H1 from '../styles/StyledDiv'
+
 //on startup (empty square brackets), sends GET req to db.json and renders saved recipes on the page. 
 
 const RecipeList = () => {
@@ -27,7 +29,8 @@ const RecipeList = () => {
   return (
     <div>
    
-      <H1>My recipe list:{recipesList}</H1>
+      <H1>My recipe list:</H1>
+      <div>{recipesList}</div>
       <hr />
       <NewRecipeButton   />
       
@@ -36,8 +39,4 @@ const RecipeList = () => {
 }
 export default RecipeList;
 // functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child
-const H1 = styled.div`
-  background-color: white;
-  width: 100px;
-  text: bold;
-`
+
