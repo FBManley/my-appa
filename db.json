@@ -107,6 +107,20 @@
       "ingredients": "unknown",
       "instructions": "pray",
       "id": 17
+    },
+    {
+      "name": "All Knighter",
+      "amount": "100",
+      "ingredients": "Blood of christ and knights templar",
+      "instructions": "combine and let rest",
+      "id": 18
+    },
+    {
+      "name": "dads martini",
+      "amount": "1",
+      "ingredients": "vodka and irish cream",
+      "instructions": "combine and puke",
+      "id": 19
     }
   ]
 }

@@ -1,12 +1,14 @@
 # Cocktail Hour
 This project can be used as inpiration to create your own unique cocktail recipes. Use NPM Start then json-server --port 3001 --watch db. for access to the db.json file. Fill out the form to save your recipe or use the find new recipe button to load a new random recipe. 
 
-Link to video walkthrough:
-Link to blog: 
+Link to video walkthrough: https://youtu.be/v3JMAG3mQGU
+Link to blog: https://medium.com/@jbmanley45/react-hooks-usestate-and-useeffect-a99572c91252
 Github link:
 
 credit to www.thecocktaildb.com | https://www.thecocktaildb.com/api.php
 
+Run NPM start
+Run json-server --port 3001 --watch db.json
 
 # Getting Started with Create React App
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send props from recipeLists, render a card for single db.json objectn by id
+const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { 
   
   return (
     <div>
@@ -16,7 +16,7 @@ const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { //send
   )
 }
 export default RecipeCard
-//destructuring takes the KEYS from the PROPS OBJECT and creates VARIABLES with each same names
+
 
 const Card = styled.div`
   background-color: #ccd0de;

@@ -30,6 +30,3 @@ import Card from '../styles/StyledCard'
   )
 }
 export default CocktailCard;
-//use ingredient to build cocktail in recipeForm
-// fetching this in recipeform: https://www.thecocktaildb.com/api/json/v1/1/random.php
-

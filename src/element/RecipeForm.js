@@ -8,7 +8,6 @@ const RecipeForm = () => {
       amount: '',
       ingredients: '',
       instructions: ''
-    // information from my form to create a recipe in my db.json. 
   }])
 
   const handleChange = (e) => {
@@ -18,7 +17,7 @@ const RecipeForm = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault() //suppressing default action of form is post, then refresh
+    e.preventDefault() 
     fetch("http://localhost:3001/recipes", {
       method: "POST",
       headers: {
@@ -35,7 +34,6 @@ const RecipeForm = () => {
   }
 
   const [cocktail, setCocktail] = useState({
-    //information from external API
   })
 
   useEffect(() => {
@@ -59,10 +57,7 @@ const RecipeForm = () => {
         strDrinkThumb: data.drinks[0].strDrinkThumb
       })
     })
-  }, []) //different array here to allow for another call to this fetch instead ONLY on load
-  //dont need useEffect here, can just be a fetch in seperate function. not a must but is nice to have
-
-//e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
+  }, []) 
   return (
    <div>
     <FetchedCard><CocktailCard drinks={cocktail}/></FetchedCard>

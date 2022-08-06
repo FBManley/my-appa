@@ -1,7 +1,6 @@
-Blog- in progress
-video- in progress
-REACT challenge- sat night, sun day maybe 2 hours, sun night 2 hours, monday night 2 hours. 
-
-FIND NEW RECIPE BUTTON- need to add and hookup 
-
-1. fix css 
+//
+//destructuring takes the KEYS from the PROPS OBJECT and creates VARIABLES with each same names
+//send props from recipeLists, render a card for single db.json objectn by id
+//different array here to allow for another call to this fetch instead ONLY on load
+//e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
+// functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child

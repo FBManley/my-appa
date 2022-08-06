@@ -1,5 +1,4 @@
 import React from "react";
-import {  NavLink} from "react-router-dom";
 import { NavbarLink, NavigationContainer  } from '../styles/StyledNav'
 
 function NavBar() {
@@ -7,19 +6,16 @@ function NavBar() {
     <NavigationContainer>
       <NavbarLink
         to="/" 
-  
       >
         Home
       </NavbarLink>
       <NavbarLink
         to="/recipelist"
-    
       >
         Recipe List
       </NavbarLink>
       <NavbarLink
         to="/recipe/new"
-  
       >
         Create New Recipe
       </NavbarLink>
