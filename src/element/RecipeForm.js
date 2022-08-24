@@ -3,8 +3,8 @@ import React, { useState, useEffect} from 'react';
 // import FetchedCard from '../styles/StyledFetchedCard'
 //Plan: take out API- allow for post/get of own RESTful data , THEN if needed, re-encorporate API
 //Can get forms state to reset but not the inputs themselves, was ommitting handleChange for the input AND the value={state}- FIXED NOW A CONTROLLED FORM
-// MIN 5 components required AND cannot rely on redirect to load --> add API and or search to satisfy component requirement
-//PLAN for 8/24: show updated list when form is submitted to avoid any redirects to load data- 
+//MIN 5 components required AND cannot rely on redirect to load --> add API and or search to satisfy component requirement
+//PLAN for 8/24: show updated list when form is submitted to avoid any redirects to load data- moving to list
 const RecipeForm = () => {
   const [name, setName] = useState("")
   const [amount, setAmount] = useState("")

@@ -11,6 +11,7 @@ const RecipeList = () => {
     .then(recipes => setRecipes(recipes)
       )
   }, [])
+  
  const recipesList = recipes.map((recipe) => (
   <RecipeCard 
     key={recipe.id}
