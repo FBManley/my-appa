@@ -7,8 +7,8 @@ Github link:
 
 credit to www.thecocktaildb.com | https://www.thecocktaildb.com/api.php
 
-Run NPM start
-Run json-server --port 3001 --watch db.json
+Run:$  start
+run:$ json-server --port 3001 --watch db.json
 
 # Getting Started with Create React App
 

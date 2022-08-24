@@ -2,9 +2,6 @@ import React, { useState, useEffect} from 'react';
 import NewRecipeButton from "./NewRecipeButton";
 import RecipeCard from "./RecipeCard";
 import H1 from '../styles/StyledDiv';
-
-
-
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -14,7 +11,6 @@ const RecipeList = () => {
     .then(recipes => setRecipes(recipes)
       )
   }, [])
-
  const recipesList = recipes.map((recipe) => (
   <RecipeCard 
     key={recipe.id}
@@ -22,7 +18,6 @@ const RecipeList = () => {
     ingredients={recipe.ingredients}
     instructions={recipe.instructions}
     amount={recipe.amount}
-   
   />
  )) 
   return (

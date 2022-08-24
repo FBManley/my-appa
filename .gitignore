@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+//
+I didnt realize I needed a handleInputChange in order for my statereset to be reflected in the dom. I could reset my state but since I had my input doing this =>> onChange={(e) => setName(e.target.value)} / (e) => setAmount(e.target.value)
