@@ -4,3 +4,103 @@
 //different array here to allow for another call to this fetch instead ONLY on load
 //e=change , e.target is the input field above syntax lets me have only one handle despite having 2+ input fields
 // functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child
+
+
+.///////////////////////////
+import React, { useState, useEffect} from 'react';
+import NewRecipeButton from "./NewRecipeButton";
+import RecipeCard from "./RecipeCard";
+import H1 from '../styles/StyledDiv';
+const RecipeList = () => {
+  const [recipes, setRecipes] = useState([]);
+  const [newRecipe, setNewRecipes] = useState({
+    name: "",
+    amount: "",
+    ingredients: "",
+    instructions: ""
+  })
+  //moved from RecipeForm
+  const [name, setName] = useState("")
+  const [amount, setAmount] = useState("")
+  const [ingredients, setIngredients] = useState("")
+  const [instructions, setInstructions] = useState("")
+
+  useEffect(() => {
+    fetch("http://localhost:3001/recipes")
+    .then(resp => resp.json())
+    .then(recipes => setRecipes(recipes)
+      )
+  }, [])
+
+  const recipesList = recipes.map((recipe) => (
+    <RecipeCard 
+      key={recipe.id}
+      name={recipe.name}
+      ingredients={recipe.ingredients}
+      instructions={recipe.instructions}
+      amount={recipe.amount}
+    />
+   )) 
+  function handleNewRecipeChange(e){
+    setNewRecipes({...newRecipe, [e.target.name]: e.target.value})
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault(); 
+
+    fetch("http://localhost:3001/recipes", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+       name: name,
+       amount: amount,
+       ingredients: ingredients,
+       instructions: instructions,
+      })
+    })
+    setName("")
+    setAmount("")
+    setIngredients("")
+    setInstructions("")
+    //update recipes state using setRecipes? on form submit, add new recipe to recipesList to show newly added RecipeCard
+    // const newRecipesList = [...recipesList, newRecipe]
+    // setRecipes({...recipesList, newRecipe})
+  }
+
+ 
+  
+ function handleNameChange(e) {
+  setName(e.target.value)
+} 
+function handleAmountChange(e){
+  setAmount(e.target.value)
+}
+function handleIngredientsChange(e){
+  setIngredients(e.target.value)
+}
+function handleInstructionsChange(e){
+  setInstructions(e.target.value)
+}
+
+  return (
+    <div>
+      <H1>My recipe list:</H1>
+      <div>{recipesList}</div>
+      <hr />
+      <NewRecipeButton   />
+      <br></br>
+    <form onSubmit={handleSubmit} >
+      <input name="name" type="text" placeholder="Drink Name" value={name} onChange={handleNameChange} /><br/>
+      <input name="amount" type="number" placeholder="Amount" value={amount} onChange={handleAmountChange}  /><br/>
+      <textarea rows={10} name="ingredients" type="text" value={ingredients} placeholder="Ingredients Required" onChange={handleIngredientsChange}  /><br/>
+      <textarea rows={10} name="instructions" type="text" value={instructions} placeholder="Instructions" onChange={handleInstructionsChange}  /><br/> 
+      <button variant="contained" onClick={handleSubmit}> <input type="submit" value = "Add Recipe"/></button> 
+    </form>
+      
+    </div>
+  )
+}
+export default RecipeList;
+

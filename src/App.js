@@ -1,4 +1,3 @@
-
 import './App.css';
 import React from "react";
 import {
@@ -6,24 +5,23 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import RecipeList  from './element/RecipeList';
+import RecipeForm  from './element/RecipeForm';
 import CocktailCard from './element/CocktailCard';
-import RecipeForm from './element/RecipeForm'; 
+import RecipeContainer from './element/RecipeContainer'; 
 import Home from './element/Home';
 import NavBar from './element/NavBar';
 import './styles/StyledNav.js'
 
 function App() {
-
   return (
-
     <Router>
     <NavBar />
         <Routes>
         <Route exact path="/" element={<Home />}/>  
-        <Route exact path="/recipelist" element={<RecipeList />}/>
+        <Route exact path="/recipes" element={ <RecipeContainer />}/> 
+        <Route exact path="/recipeform" element={<RecipeForm />}/>
         <Route exact path="/cocktailcard" element={<CocktailCard />}/>
-        <Route exact path="/recipe/new" element={ <RecipeForm />}/> 
+        
         </Routes>
     </Router>
   );
