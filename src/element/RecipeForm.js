@@ -37,7 +37,7 @@ const RecipeForm = ({ onAddRecipe }) => {
            amount: "",
            ingredients: "",
            instructions: ""
-          })
+          }) //resetting forms to empty w setState, back to original statev // POST req returns the object that was added- so now it knows its own id- 
   }
 
   return (

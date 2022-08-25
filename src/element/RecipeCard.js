@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const RecipeCard = ({ amount, id, ingredients, instructions, name }) => { 
-  
+const RecipeCard = ({recipe}) => { 
+  // console.log(name, amount, id, ingredients, instructions )
   return (
     <div>
       <Card className='.container'sx={{ maxWidth: 350 }} variant="outlined">
-      <h3>Recipe Name: {name}</h3>
-      <p>Amount: {amount}</p>
-      <p>Ingredients: {ingredients}</p>
-      <p> Instructions: {instructions}</p>
-      <p>{id}</p>
+      <h3>Recipe Name: {recipe.name}</h3>
+      <p>Amount: {recipe.amount}</p>
+      <p>Ingredients: {recipe.ingredients}</p>
+      <p> Instructions: {recipe.instructions}</p>
+      <p>{recipe.id}</p>
       </Card>
      </div>
   )

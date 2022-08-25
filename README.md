@@ -1,3 +1,18 @@
+# MPV
+create Recipes
+List Recipes
+Home Page
+
+# stretch
+favorite recipes
+display recipe (more info)
+Update Recipe
+Delete Recipe
+//ALT + arrow moves lines up/down
+
+# Video tips:  
+rules of immunibility-only place thats allowed to change state 
+
 # Cocktail Hour
 This project can be used as inpiration to create your own unique cocktail recipes. Use NPM Start then json-server --port 3001 --watch db. for access to the db.json file. Fill out the form to save your recipe or use the find new recipe button to load a new random recipe. 
 

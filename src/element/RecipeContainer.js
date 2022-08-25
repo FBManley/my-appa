@@ -1,9 +1,8 @@
 import React, { useState, useEffect} from 'react';
 import RecipeForm from './RecipeForm';
 // import Search from './Search';
-// import RecipeCard from './RecipeCard';
+import RecipeCard from './RecipeCard';
 // import Filter from './Filter';
-
 // import CocktailCard from './CocktailCard'
 // import FetchedCard from '../styles/StyledFetchedCard'
 //Plan: take out API- allow for post/get of own RESTful data , THEN if needed, re-encorporate API
@@ -13,44 +12,58 @@ import RecipeForm from './RecipeForm';
 //parent of Search(search recipeList by alcohol toggle-super ez), RecipeForm(), RecipeCard, RecioeFilter
 
 const RecipeContainer = () => {
-  const [recipeList, setRecipeList] = useState([]);
-  // const [selectedCategory, setSelectedCategory] = useState(true)//alcoholic vs non, 
-  // const [searchTerm, setSearchTerm] = useState("") //search by drink name
+  const [recipeList, setRecipeList] = useState([]); //just adding to state lets it pop on page.
+  // const [selectedCategory, setSelectedCategory] = useState("All")//alcoholic vs non, 
+  const [search, setSearch] = useState("") //search by drink name
 
   
   useEffect(() => {
     fetch("http://localhost:3001/recipes")
       .then(resp => resp.json())
       .then((recipe) => {setRecipeList(recipe)
-        console.log(recipe)
+        // console.log(recipe)
       })
       
   }, [])
 
+  const recipeCards = recipeList.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe}/>)
+  //only place allowed to change state- list will have search, that allows us to update search state?
+  
   function handleAddRecipe(newrecipe) {
-    setRecipeList([...recipeList, newrecipe])
+    setRecipeList([...recipeList, newrecipe]) //add state to frontend react reacts to change of state. 
   }
+
+//  const recipesToDisplay = () => {
+//   return recipeList.filter((recipe) => recipe.name.toLowerCase().includes(search.toLowerCase()))
+//  }
+  //   const recipesToDisplay = recipeList.filter((recipe) => selectedCategory === "All" || recipe.name === selectedCategory)
+  // .filter((recipe) => recipe.name.toLowerCase().includes(search.toLowerCase()))
+
+  // console.log(recipeList)
+// const filteredRecipes = () => {
+//   return recipeList.filter((recipe) => recipe.name.toLowerCase().includes(search.toLowerCase()))
+// }
+
   // function handleCategoryChange(e){
   //   setSelectedCategory(e.target.value)
   // }
   // function handleRecipeChange(e){
   //   setSelectedCategory(e.target.value)
   // }
-  // function filteredRecipes(){
-  //   return recipesList.filter(
-  // }
-  // const recipesToDisplay = recipesList.filter((recipe) => selectedCategory === "All" || recipe.name === selectedCategory)
-  // .filter((recipe) => recipe.name.toLowerCase().includes(search.toLowerCase()))
+
 
   return (
    <div>
     {/* <Search search={search} onSearchChange={setSearch} /> */}
     {/* <Filter onCategoryChange={handleCategoryChange}/> */}
     <RecipeForm  onAddRecipe={handleAddRecipe}/>
+    <div> {recipeCards}</div>
     
     {/* <ul>
       {recipesToDisplay().map((recipe) => (
         <RecipeCard 
+        recipeList={recipeList}
+        recipe={recipe}
         key={recipe.id}
         name={recipe.name}
         ingredients={recipe.ingredients}
