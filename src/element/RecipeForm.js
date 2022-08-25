@@ -1,6 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import RecipeCard from "./RecipeCard";
-import H1 from '../styles/StyledDiv';
 
 const RecipeForm = ({ onAddRecipe }) => {
  
@@ -37,14 +35,13 @@ const RecipeForm = ({ onAddRecipe }) => {
            amount: "",
            ingredients: "",
            instructions: ""
-          }) //resetting forms to empty w setState, back to original statev // POST req returns the object that was added- so now it knows its own id- 
+          }) 
   }
 
   return (
     <div>
-      {/* <H1>My recipe list:</H1> */}
       <div></div>
-      <hr />
+      <hr/>
       <br></br>
     <form onSubmit={handleSubmit} >
       <input name="name" type="text" placeholder="Drink Name" value={newRecipe.name} onChange={handleNewRecipeChange} /><br/>
@@ -53,43 +50,7 @@ const RecipeForm = ({ onAddRecipe }) => {
       <textarea rows={10} name="instructions" type="text" value={newRecipe.instructions} placeholder="Instructions" onChange={handleNewRecipeChange}  /><br/> 
       <button variant="contained" onClick={handleSubmit}> <input type="submit" value = "Add Recipe"/></button> 
     </form>
-      
     </div>
   )
 }
 export default RecipeForm;
-
-//  function handleNameChange(e) {
-//   setName(e.target.value)
-// } 
-// function handleAmountChange(e){
-//   setAmount(e.target.value)
-// }
-// function handleIngredientsChange(e){
-//   setIngredients(e.target.value)
-// }
-// function handleInstructionsChange(e){
-//   setInstructions(e.target.value)
-// }
-    // setName("")
-    // setAmount("")
-    // setIngredients("")
-    // setInstructions("")
-    //update recipes state using setRecipes? on form submit, add new recipe to recipesList to show newly added RecipeCard
-    // const newRecipesList = [...recipesList, newRecipe]
-    // setRecipes({...recipesList, newRecipe})
-
-      //moved from RecipeForm
-  // const [name, setName] = useState("")
-  // const [amount, setAmount] = useState("")
-  // const [ingredients, setIngredients] = useState("")
-  // const [instructions, setInstructions] = useState("")
-  // {filteredRecipes().map((recipe) => (
-  //   <RecipeCard 
-  //   recipe={setRecipes}
-  //   key={recipe.id}
-  //   name={recipe.name}
-  //   ingredients={recipe.ingredients}
-  //   instructions={recipe.instructions}
-  //   amount={recipe.amount}/>
-  // ))} <NewRecipeButton   />

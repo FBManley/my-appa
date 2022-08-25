@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const RecipeCard = ({recipe}) => { 
-  // console.log(name, amount, id, ingredients, instructions )
+
   return (
     <div>
       <Card className='.container'sx={{ maxWidth: 350 }} variant="outlined">

@@ -5,13 +5,13 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import RecipeForm  from './element/RecipeForm';
 import CocktailCard from './element/CocktailCard';
 import RecipeContainer from './element/RecipeContainer'; 
 import Home from './element/Home';
 import NavBar from './element/NavBar';
+import NewRandomRecipe from './element/NewRandomRecipe';
 import './styles/StyledNav.js'
-//recipecontainer=recipeList
+
 function App() {
   return (
     <Router>
@@ -19,7 +19,7 @@ function App() {
         <Routes>
         <Route exact path="/" element={<Home />}/>  
         <Route exact path="/recipes" element={ <RecipeContainer />}/> 
-        <Route exact path="/recipeform" element={<RecipeForm />}/>
+        <Route exact path="/newrandomrecipe" element={<NewRandomRecipe />}/>
         <Route exact path="/cocktailcard" element={<CocktailCard />}/>
         
         </Routes>

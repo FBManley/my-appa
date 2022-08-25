@@ -1,3 +1,5 @@
+//Goals to fix this: - dont: restart, clean it up, then add Search filter, updateRecipe, and deleteRecipe for better well rounded project: 
+
 //
 //destructuring takes the KEYS from the PROPS OBJECT and creates VARIABLES with each same names
 //send props from recipeLists, render a card for single db.json objectn by id
@@ -6,7 +8,7 @@
 // functional components can have only one prop passed to them, according to the REACT documentation: meaning i have to map in the parent before sending to child
 
 
-.///////////////////////////
+///////////////////////////
 import React, { useState, useEffect} from 'react';
 import NewRecipeButton from "./NewRecipeButton";
 import RecipeCard from "./RecipeCard";
@@ -64,9 +66,6 @@ const RecipeList = () => {
     setAmount("")
     setIngredients("")
     setInstructions("")
-    //update recipes state using setRecipes? on form submit, add new recipe to recipesList to show newly added RecipeCard
-    // const newRecipesList = [...recipesList, newRecipe]
-    // setRecipes({...recipesList, newRecipe})
   }
 
  
